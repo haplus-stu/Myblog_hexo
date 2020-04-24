@@ -11347,6 +11347,10 @@ figure.highlight .section {
     padding: 1.5rem 1rem;
   }
 }
+@font-face {
+  font-family: "Noto Sans";
+  src: url("fonts/NotoSansJP-DemiLight.otf") format("opentype");
+}
 body {
   counter-reset: card;
 }
