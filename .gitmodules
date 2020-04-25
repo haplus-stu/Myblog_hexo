@@ -1,0 +1,4 @@
+
+[submodule "themes/theme-icarus"]
+	path = themes/theme-icarus
+	url = git@github.com:haplus-stu/hexo-theme-icarus.git
