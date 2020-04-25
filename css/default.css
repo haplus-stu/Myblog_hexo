@@ -1,21 +1,4 @@
-@import url("http://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
-@-moz-keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 @-webkit-keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@-o-keyframes spinAround {
   from {
     transform: rotate(0deg);
   }
@@ -170,7 +153,8 @@
 .loader,
 .select.is-loading::after,
 .control.is-loading::after {
-  animation: spinAround 500ms infinite linear;
+  -webkit-animation: spinAround 500ms infinite linear;
+          animation: spinAround 500ms infinite linear;
   border: 2px solid #dbdbdb;
   border-radius: 290486px;
   border-right-color: transparent;
@@ -397,7 +381,10 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 article,
 aside,
@@ -413,13 +400,13 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Noto Sans Japanese', serif, Ubuntu, Roboto, 'Open Sans', sans-serif;
+  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif;
 }
 code,
 pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace, 'Microsoft YaHei';
 }
 body {
   color: #4a4a4a;
@@ -1058,19 +1045,19 @@ a.has-text-grey-lightest:focus {
   font-weight: 700 !important;
 }
 .is-family-primary {
-  font-family: 'Noto Sans Japanese', serif, Ubuntu, Roboto, 'Open Sans', sans-serif !important;
+  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
 }
 .is-family-secondary {
-  font-family: 'Noto Sans Japanese', serif, Ubuntu, Roboto, 'Open Sans', sans-serif !important;
+  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
 }
 .is-family-sans-serif {
-  font-family: 'Noto Sans Japanese', serif, Ubuntu, Roboto, 'Open Sans', sans-serif !important;
+  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
 }
 .is-family-monospace {
   font-family: monospace !important;
 }
 .is-family-code {
-  font-family: 'Source Code Pro', monospace !important;
+  font-family: 'Source Code Pro', monospace, 'Microsoft YaHei' !important;
 }
 .is-block {
   display: block !important;
@@ -5773,10 +5760,14 @@ fieldset[disabled] .button {
   background-image: linear-gradient(to right, #ededed 30%, #ededed 30%);
 }
 .progress:indeterminate {
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-name: moveIndeterminate;
-  animation-timing-function: linear;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: moveIndeterminate;
+          animation-name: moveIndeterminate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   background-color: #ededed;
   background-image: linear-gradient(to right, #4a4a4a 30%, #ededed 30%);
   background-position: top left;
@@ -5798,23 +5789,7 @@ fieldset[disabled] .button {
 .progress.is-large {
   height: 1.5rem;
 }
-@-moz-keyframes moveIndeterminate {
-  from {
-    background-position: 200% 0;
-  }
-  to {
-    background-position: -200% 0;
-  }
-}
 @-webkit-keyframes moveIndeterminate {
-  from {
-    background-position: 200% 0;
-  }
-  to {
-    background-position: -200% 0;
-  }
-}
-@-o-keyframes moveIndeterminate {
   from {
     background-position: 200% 0;
   }
@@ -9302,6 +9277,8 @@ fieldset[disabled] .select select:hover {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
   min-height: min-content;
 }
 .tile.is-ancestor {
@@ -10791,7 +10768,8 @@ article.article .content blockquote footer strong + cite {
   margin-right: 0;
 }
 .thumbnail {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100% !important;
   height: 100% !important;
 }
@@ -11165,7 +11143,7 @@ figure.highlight figcaption * {
 }
 figure.highlight figcaption span {
   font-weight: 500;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace, 'Microsoft YaHei';
 }
 figure.highlight figcaption .level-left *:not(:last-child) {
   margin-right: 0.5em;
@@ -11287,7 +11265,10 @@ figure.highlight .section {
   }
 }
 .pace {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 .pace .pace-progress {
@@ -11345,8 +11326,4 @@ figure.highlight .section {
   .section {
     padding: 1.5rem 1rem;
   }
-}
-@font-face {
-  font-family: "Noto Sans";
-  src: url("fonts/NotoSansJP-DemiLight.otf") format("opentype");
 }
