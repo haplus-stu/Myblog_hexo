@@ -10716,6 +10716,10 @@ article.media .media-content .title {
   margin: 0;
   line-height: inherit;
 }
+article.article .content-link {
+  text-decoration: none;
+  color: #000;
+}
 article.article .article-meta,
 article.article .article-tags {
   color: #848484;
